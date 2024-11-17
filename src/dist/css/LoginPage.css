@@ -1,0 +1,170 @@
+/* Main container */
+.login-container {
+    display: flex;
+    height: 100vh; /* Memastikan kontainer utama setinggi viewport */
+    background-color: #c9d6df; /* Background color close to grayish-blue */
+    font-family: 'Poppins', sans-serif; /* Mengubah font menjadi Poppins */
+    overflow: hidden; /* Menghapus scroll */
+}
+
+
+.login-image img {
+    width: 100%; /* Make the image width 100% of the container */
+    height: 200%; /* Maintain the image's aspect ratio */
+    max-height: 100%; /* Ensure the image doesn't exceed the height of the container */
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+
+}
+
+/* Right side form container */
+.login-form {
+    width: 800px;
+    padding: 40px;
+    background-color: #f9fbfc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative; /* For positioning password toggle */
+    margin-left: auto; /* Shift form to the left */
+}
+
+/* Form heading and subheading */
+.login-form h2 {
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.login-form p {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Input fields */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #64748B; /* Menambah ketebalan border */
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex: 1; /* Mengizinkan input untuk mengambil sisa ruang yang tersedia */
+    padding: 12px; /* Sesuaikan padding */
+    padding-right: 40px; /* Memberikan ruang untuk ikon */
+    border: 2px solid #64748B; /* Menambah ketebalan border */
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.password-icon {
+    position: absolute;
+    right: 10px; /* Jarak dari sisi kanan */
+    cursor: pointer; /* Menunjukkan bahwa ikon dapat diklik */
+    width: 20px; /* Atur ukuran ikon sesuai kebutuhan */
+    height: 20px; /* Atur ukuran ikon sesuai kebutuhan */
+    top: 60%; /* Menempatkan ikon sedikit lebih rendah dari tengah secara vertikal */
+    transform: translateY(-50%); /* Masih mengatur ikon agar berada di tengah vertikal */
+}
+
+
+/* Input placeholders (style as per screenshot) */
+.login-form input::placeholder {
+    color: #999999;
+    font-size: 0.95em;
+}
+
+/* Password visibility icon */
+.login-form .password-toggle {
+    position: absolute;
+    right: 15px;
+    top: calc(50% + 20px); /* Adjust to align with input field */
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6d6d6d;
+}
+
+/* Submit button */
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 40px;
+    background-color: #00796B; /* Updated button color */
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #014b42; /* Slightly darker shade on hover */
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #888;
+}
+.error-message {
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+    margin-left: 120px;
+  }
+  .password-container {
+    position: relative;
+  }
+  
+  .password-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .input-field {
+    padding-right: 30px; /* Memberikan ruang agar ikon mata tidak tertumpuk dengan teks */
+  }
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-image {
+        height: 50vh;
+    }
+
+    .login-form {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
