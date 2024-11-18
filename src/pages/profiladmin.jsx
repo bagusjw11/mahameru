@@ -14,7 +14,7 @@ const Profiladmin = () => {
 
       <div className="admin-profile">
       <h2>Profil Admin</h2>
-      <p>Ini adalah halaman untuk melihat profil dan mengedit profil admink</p>
+      <p>Ini adalah halaman untuk melihat profil dan mengedit profil admin</p>
       </div>
       <div className="profile-card box">
         <div className="profile-header box">
@@ -23,7 +23,7 @@ const Profiladmin = () => {
         </div>
           <div className="profile-info box">
             <h3>Refiani Julianti</h3>
-            <p>Pengelola Agrowisata Tepas papandayan</p>
+            <p>Pengelola Agrowisata Tepas Papandayan</p>
             <p>Unnamed Road, Cisurupan, Kec. Cisurupan, Kabupaten Garut, Jawa Barat 44163</p>
           </div>
           <button className="edit-button box" onClick={() => navigate('/editprofil')}>Edit</button>
